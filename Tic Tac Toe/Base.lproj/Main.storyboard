@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tic_Tac_Toe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView verifyAmbiguity="off" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XsD-9M-Ke5">
+                                <rect key="frame" x="20" y="44" width="374" height="718"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nX6-2k-Nqx">
+                                <rect key="frame" x="101" y="802" width="212" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Начать заново"/>
+                                <connections>
+                                    <action selector="restartButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9K8-To-4vx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbc-Kc-sPY">
+                                <rect key="frame" x="136" y="770" width="142" height="30"/>
+                                <state key="normal" title="Первый ход компа"/>
+                                <connections>
+                                    <action selector="pcMoveButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gaR-hR-Yic"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tz-zD-mKE">
+                                <rect key="frame" x="20" y="732" width="95" height="30"/>
+                                <state key="normal" title="Комп - тупой">
+                                    <color key="titleColor" systemColor="systemGrayColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="dumbPcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RK7-Si-bwb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A6T-tw-Vhu">
+                                <rect key="frame" x="294" y="732" width="100" height="30"/>
+                                <state key="normal" title="Комп - умный">
+                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="smartPcButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fyT-cC-olN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3Tz-zD-mKE" firstAttribute="leading" secondItem="XsD-9M-Ke5" secondAttribute="leading" id="95y-wL-5PM"/>
+                            <constraint firstItem="A6T-tw-Vhu" firstAttribute="leading" secondItem="3Tz-zD-mKE" secondAttribute="trailing" constant="179" id="BDf-tO-eKu"/>
+                            <constraint firstItem="A6T-tw-Vhu" firstAttribute="trailing" secondItem="XsD-9M-Ke5" secondAttribute="trailing" id="EM9-ek-zQk"/>
+                            <constraint firstItem="XsD-9M-Ke5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FS9-ag-bTV"/>
+                            <constraint firstItem="3Tz-zD-mKE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="688" id="HkJ-5M-i2S"/>
+                            <constraint firstItem="nX6-2k-Nqx" firstAttribute="top" secondItem="wbc-Kc-sPY" secondAttribute="bottom" constant="2" id="U8B-y9-oPX"/>
+                            <constraint firstItem="wbc-Kc-sPY" firstAttribute="top" secondItem="XsD-9M-Ke5" secondAttribute="bottom" constant="8" id="V4C-AO-eAv"/>
+                            <constraint firstItem="A6T-tw-Vhu" firstAttribute="bottom" secondItem="XsD-9M-Ke5" secondAttribute="bottom" id="YuT-qr-L0p"/>
+                            <constraint firstItem="wbc-Kc-sPY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="136" id="eoP-zo-Xfy"/>
+                            <constraint firstItem="A6T-tw-Vhu" firstAttribute="baseline" secondItem="3Tz-zD-mKE" secondAttribute="baseline" id="ipj-Ar-z1e"/>
+                            <constraint firstItem="XsD-9M-Ke5" firstAttribute="centerX" secondItem="wbc-Kc-sPY" secondAttribute="centerX" id="kL2-FA-NrR"/>
+                            <constraint firstItem="XsD-9M-Ke5" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="qDI-1x-cJ6"/>
+                            <constraint firstItem="XsD-9M-Ke5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sOo-oU-ERI"/>
+                            <constraint firstItem="wbc-Kc-sPY" firstAttribute="centerX" secondItem="nX6-2k-Nqx" secondAttribute="centerX" id="yM2-E7-saq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dumbPcButton" destination="3Tz-zD-mKE" id="NR2-J6-3Q1"/>
+                        <outlet property="imageView" destination="XsD-9M-Ke5" id="B0u-Ha-MYE"/>
+                        <outlet property="smartPcButton" destination="A6T-tw-Vhu" id="hge-qH-FLs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
